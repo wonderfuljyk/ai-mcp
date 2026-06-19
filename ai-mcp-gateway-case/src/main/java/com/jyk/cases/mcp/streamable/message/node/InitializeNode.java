@@ -1,0 +1,67 @@
+package com.jyk.cases.mcp.streamable.message.node;
+
+import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.jyk.cases.mcp.streamable.message.AbstractMcpStreamableMessageServiceSupport;
+import com.jyk.cases.mcp.streamable.message.factory.DefaultMcpStreamableMessageFactory;
+import com.jyk.domain.auth.model.entity.LicenseCommandEntity;
+import com.jyk.domain.auth.service.IAuthLicenseService;
+import com.jyk.domain.session.model.entity.HandleMessageCommandEntity;
+import com.jyk.domain.session.model.valobj.McpSchemaVO;
+import com.jyk.domain.session.model.valobj.SessionConfigVO;
+import com.jyk.domain.session.model.valobj.enums.SessionTransportTypeEnumVO;
+import com.jyk.types.enums.McpErrorCodes;
+import com.jyk.types.exception.AppException;
+import jakarta.annotation.Resource;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+/**
+ * Streamable initialize 节点
+ *
+ * @author best jyk
+ * 2026/5/25 08:00
+ */
+@Slf4j
+@Service("mcpStreamableMessageInitializeNode")
+public class InitializeNode extends AbstractMcpStreamableMessageServiceSupport {
+
+    @Resource
+    private IAuthLicenseService authLicenseService;
+
+    @Autowired
+    private ObjectMapper objectMapper;
+
+    @Override
+    protected ResponseEntity<?> doApply(HandleMessageCommandEntity requestParameter, DefaultMcpStreamableMessageFactory.DynamicContext dynamicContext) throws Exception {
+        log.info("Streamable 消息处理 InitializeNode:{}", requestParameter);
+
+        boolean isCheckSuccess = authLicenseService.checkLicense(new LicenseCommandEntity(requestParameter.getGatewayId(), requestParameter.getApiKey()));
+        if (!isCheckSuccess) {
+            throw new AppException(McpErrorCodes.INSUFFICIENT_PERMISSIONS, "fail to auth apikey");
+        }
+
+        SessionConfigVO sessionConfigVO = sessionManagementService.createSession(
+                requestParameter.getGatewayId(),
+                requestParameter.getApiKey(),
+                SessionTransportTypeEnumVO.STREAMABLE);
+        dynamicContext.setSessionConfigVO(sessionConfigVO);
+
+        McpSchemaVO.JSONRPCResponse jsonrpcResponse = serviceMessageService.processHandlerMessage(requestParameter);
+        String responseJson = objectMapper.writeValueAsString(jsonrpcResponse);
+
+        return ResponseEntity.ok()
+                .contentType(MediaType.APPLICATION_JSON)
+                .header("Mcp-Session-Id", sessionConfigVO.getSessionId())
+                .body(responseJson);
+    }
+
+    @Override
+    public StrategyHandler<HandleMessageCommandEntity, DefaultMcpStreamableMessageFactory.DynamicContext, ResponseEntity<?>> get(HandleMessageCommandEntity requestParameter, DefaultMcpStreamableMessageFactory.DynamicContext dynamicContext) throws Exception {
+        return defaultStrategyHandler;
+    }
+
+}
