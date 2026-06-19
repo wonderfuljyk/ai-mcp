@@ -2,7 +2,8 @@ package com.jyk.cases.mcp.streamable.session.factory;
 
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
 import com.jyk.cases.mcp.streamable.session.node.RootNode;
-import com.jyk.domain.session.model.valobj.SessionConfigVO;
+
+import com.jyk.domain.admin.session.model.valobj.SessionConfigVO;
 import jakarta.annotation.Resource;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

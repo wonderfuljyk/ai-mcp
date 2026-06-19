@@ -1,7 +1,8 @@
 package com.jyk.cases.admin;
 
-import com.jyk.domain.gateway.model.entity.GatewayConfigCommandEntity;
-import com.jyk.domain.gateway.model.entity.GatewayToolConfigCommandEntity;
+
+import com.jyk.domain.admin.gateway.model.entity.GatewayConfigCommandEntity;
+import com.jyk.domain.admin.gateway.model.entity.GatewayToolConfigCommandEntity;
 
 /**
  * 网关配置管理

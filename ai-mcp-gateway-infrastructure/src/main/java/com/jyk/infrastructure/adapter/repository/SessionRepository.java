@@ -1,9 +1,10 @@
 package com.jyk.infrastructure.adapter.repository;
 
-import com.jyk.domain.session.adapter.repository.ISessionRepository;
-import com.jyk.domain.session.model.valobj.gateway.McpGatewayConfigVO;
-import com.jyk.domain.session.model.valobj.gateway.McpToolConfigVO;
-import com.jyk.domain.session.model.valobj.gateway.McpToolProtocolConfigVO;
+
+import com.jyk.domain.admin.session.adapter.repository.ISessionRepository;
+import com.jyk.domain.admin.session.model.valobj.gateway.McpGatewayConfigVO;
+import com.jyk.domain.admin.session.model.valobj.gateway.McpToolConfigVO;
+import com.jyk.domain.admin.session.model.valobj.gateway.McpToolProtocolConfigVO;
 import com.jyk.infrastructure.dao.IMcpGatewayDao;
 import com.jyk.infrastructure.dao.IMcpGatewayToolDao;
 import com.jyk.infrastructure.dao.IMcpProtocolHttpDao;

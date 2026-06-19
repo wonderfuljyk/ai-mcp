@@ -1,6 +1,7 @@
 package com.jyk.domain.admin;
 
-import com.jyk.domain.auth.model.entity.RegisterCommandEntity;
+
+import com.jyk.domain.admin.auth.model.entity.RegisterCommandEntity;
 
 /**
  * 运营；认证配置管理

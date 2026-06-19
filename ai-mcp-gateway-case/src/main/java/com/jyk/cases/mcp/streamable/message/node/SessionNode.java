@@ -3,8 +3,9 @@ package com.jyk.cases.mcp.streamable.message.node;
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
 import com.jyk.cases.mcp.streamable.message.AbstractMcpStreamableMessageServiceSupport;
 import com.jyk.cases.mcp.streamable.message.factory.DefaultMcpStreamableMessageFactory;
-import com.jyk.domain.session.model.entity.HandleMessageCommandEntity;
-import com.jyk.domain.session.model.valobj.SessionConfigVO;
+
+import com.jyk.domain.admin.session.model.entity.HandleMessageCommandEntity;
+import com.jyk.domain.admin.session.model.valobj.SessionConfigVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

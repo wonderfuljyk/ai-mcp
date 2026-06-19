@@ -4,7 +4,8 @@ import com.alibaba.fastjson.JSON;
 import com.jyk.api.IMcpStreamableService;
 import com.jyk.cases.mcp.IMcpMessageService;
 import com.jyk.cases.mcp.IMcpSessionService;
-import com.jyk.domain.session.model.entity.HandleMessageCommandEntity;
+
+import com.jyk.domain.admin.session.model.entity.HandleMessageCommandEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.HttpHeaders;

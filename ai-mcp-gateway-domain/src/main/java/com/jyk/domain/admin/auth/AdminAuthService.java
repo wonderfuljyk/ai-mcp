@@ -1,8 +1,10 @@
 package com.jyk.domain.admin.auth;
 
-import com.jyk.cases.admin.IAdminAuthService;
-import com.jyk.domain.auth.model.entity.RegisterCommandEntity;
-import com.jyk.domain.auth.service.IAuthRegisterService;
+
+import com.jyk.domain.admin.IAdminAuthService;
+
+import com.jyk.domain.admin.auth.model.entity.RegisterCommandEntity;
+import com.jyk.domain.admin.auth.service.IAuthRegisterService;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -14,7 +16,7 @@ import org.springframework.stereotype.Service;
  * 2026/3/24 08:11
  */
 @Slf4j
-@Service
+@Service("domainAdminAuthService")
 public class AdminAuthService implements IAdminAuthService {
 
     @Resource

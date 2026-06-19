@@ -1,7 +1,8 @@
 package com.jyk.trigger.listener;
 
 import com.jyk.cases.distributed.IDistributedService;
-import com.jyk.domain.session.model.valobj.SessionSyncEventVO;
+
+import com.jyk.domain.admin.session.model.valobj.SessionSyncEventVO;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;

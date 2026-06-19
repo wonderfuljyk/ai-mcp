@@ -2,9 +2,10 @@ package com.jyk.cases.mcp.sse.message;
 
 import cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter;
 import com.jyk.cases.mcp.sse.message.factory.DefaultMcpMessageFactory;
-import com.jyk.domain.session.model.entity.HandleMessageCommandEntity;
-import com.jyk.domain.session.service.ISessionManagementService;
-import com.jyk.domain.session.service.ISessionMessageService;
+
+import com.jyk.domain.admin.session.model.entity.HandleMessageCommandEntity;
+import com.jyk.domain.admin.session.service.ISessionManagementService;
+import com.jyk.domain.admin.session.service.ISessionMessageService;
 import org.springframework.http.ResponseEntity;
 
 import javax.annotation.Resource;

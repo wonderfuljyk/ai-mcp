@@ -1,11 +1,13 @@
 package com.jyk.domain.admin.protocol;
 
-import com.jyk.cases.admin.IAdminProtocolService;
-import com.jyk.domain.protocol.model.entity.AnalysisCommandEntity;
-import com.jyk.domain.protocol.model.entity.StorageCommandEntity;
-import com.jyk.domain.protocol.model.valobj.http.HTTPProtocolVO;
-import com.jyk.domain.protocol.service.IProtocolAnalysis;
-import com.jyk.domain.protocol.service.IProtocolStorage;
+
+import com.jyk.domain.admin.IAdminProtocolService;
+
+import com.jyk.domain.admin.protocol.model.entity.AnalysisCommandEntity;
+import com.jyk.domain.admin.protocol.model.entity.StorageCommandEntity;
+import com.jyk.domain.admin.protocol.model.valobj.http.HTTPProtocolVO;
+import com.jyk.domain.admin.protocol.service.IProtocolAnalysis;
+import com.jyk.domain.admin.protocol.service.IProtocolStorage;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -19,7 +21,7 @@ import java.util.List;
  * 2026/3/24 08:12
  */
 @Slf4j
-@Service
+@Service("domainAdminProtocolService")
 public class AdminProtocolService implements IAdminProtocolService {
 
     @Resource

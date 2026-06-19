@@ -2,8 +2,9 @@ package com.jyk.cases.mcp.sse.message.factory;
 
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
 import com.jyk.cases.mcp.sse.message.node.RootNode;
-import com.jyk.domain.session.model.entity.HandleMessageCommandEntity;
-import com.jyk.domain.session.model.valobj.SessionConfigVO;
+
+import com.jyk.domain.admin.session.model.entity.HandleMessageCommandEntity;
+import com.jyk.domain.admin.session.model.valobj.SessionConfigVO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

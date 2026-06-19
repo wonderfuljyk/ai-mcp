@@ -1,8 +1,9 @@
 package com.jyk.domain.admin;
 
-import com.jyk.domain.protocol.model.entity.AnalysisCommandEntity;
-import com.jyk.domain.protocol.model.entity.StorageCommandEntity;
-import com.jyk.domain.protocol.model.valobj.http.HTTPProtocolVO;
+
+import com.jyk.domain.admin.protocol.model.entity.AnalysisCommandEntity;
+import com.jyk.domain.admin.protocol.model.entity.StorageCommandEntity;
+import com.jyk.domain.admin.protocol.model.valobj.http.HTTPProtocolVO;
 
 /**
  * 协议配置管理

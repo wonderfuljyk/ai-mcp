@@ -1,6 +1,9 @@
 package com.jyk.cases.admin;
 
-import com.jyk.domain.protocol.model.entity.StorageCommandEntity;
+import com.jyk.domain.admin.protocol.model.entity.StorageCommandEntity;
+import com.jyk.domain.admin.protocol.model.entity.AnalysisCommandEntity; // 1. 引入正确的实体类
+import com.jyk.domain.admin.protocol.model.valobj.http.HTTPProtocolVO;   // 2. 引入正确的VO类
+import java.util.List;
 
 /**
  * 协议配置管理
@@ -14,8 +17,10 @@ public interface IAdminProtocolService {
 
     void deleteGatewayProtocol(Long protocolId);
 
-    void importGatewayProtocol(com.jyk.domain.protocol.model.entity.AnalysisCommandEntity commandEntity);
 
-    java.util.List<com.jyk.domain.protocol.model.valobj.http.HTTPProtocolVO> analysisProtocol(com.jyk.domain.protocol.model.entity.AnalysisCommandEntity commandEntity);
+    void importGatewayProtocol(AnalysisCommandEntity commandEntity);
+
+    // ✨ 修复后：返回值和参数完美对齐领域层
+    List<HTTPProtocolVO> analysisProtocol(AnalysisCommandEntity commandEntity);
 
 }

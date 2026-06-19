@@ -1,9 +1,10 @@
 package com.jyk.infrastructure.adapter.repository;
 
-import com.jyk.domain.auth.adapter.repository.IAuthRepository;
-import com.jyk.domain.auth.model.entity.LicenseCommandEntity;
-import com.jyk.domain.auth.model.valobj.McpGatewayAuthVO;
-import com.jyk.domain.auth.model.valobj.enums.AuthStatusEnum;
+
+import com.jyk.domain.admin.auth.adapter.repository.IAuthRepository;
+import com.jyk.domain.admin.auth.model.entity.LicenseCommandEntity;
+import com.jyk.domain.admin.auth.model.valobj.McpGatewayAuthVO;
+import com.jyk.domain.admin.auth.model.valobj.enums.AuthStatusEnum;
 import com.jyk.infrastructure.dao.IMcpGatewayAuthDao;
 import com.jyk.infrastructure.dao.IMcpGatewayDao;
 import com.jyk.infrastructure.dao.po.McpGatewayAuthPO;

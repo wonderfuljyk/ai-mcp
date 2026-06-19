@@ -1,8 +1,9 @@
 package com.jyk.test.domain.gateway;
 
-import com.jyk.domain.gateway.model.entity.GatewayConfigCommandEntity;
-import com.jyk.domain.gateway.model.valobj.GatewayConfigVO;
-import com.jyk.domain.gateway.service.IGatewayConfigService;
+
+import com.jyk.domain.admin.gateway.model.entity.GatewayConfigCommandEntity;
+import com.jyk.domain.admin.gateway.model.valobj.GatewayConfigVO;
+import com.jyk.domain.admin.gateway.service.IGatewayConfigService;
 import com.jyk.types.enums.GatewayEnum;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;

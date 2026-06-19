@@ -3,7 +3,8 @@ package com.jyk.cases.mcp.streamable.session.node;
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
 import com.jyk.cases.mcp.streamable.session.AbstractMcpStreamableSessionSupport;
 import com.jyk.cases.mcp.streamable.session.factory.DefaultMcpStreamableSessionFactory;
-import com.jyk.domain.session.model.valobj.SessionConfigVO;
+
+import com.jyk.domain.admin.session.model.valobj.SessionConfigVO;
 import com.jyk.types.enums.McpErrorCodes;
 import com.jyk.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;

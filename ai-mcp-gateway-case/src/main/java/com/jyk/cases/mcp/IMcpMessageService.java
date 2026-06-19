@@ -1,6 +1,7 @@
 package com.jyk.cases.mcp;
 
-import com.jyk.domain.session.model.entity.HandleMessageCommandEntity;
+
+import com.jyk.domain.admin.session.model.entity.HandleMessageCommandEntity;
 import org.springframework.http.ResponseEntity;
 
 /**

@@ -1,10 +1,10 @@
 package com.jyk.cases.admin.gateway;
 
 import com.jyk.cases.admin.IAdminGatewayService;
-import com.jyk.domain.gateway.model.entity.GatewayConfigCommandEntity;
-import com.jyk.domain.gateway.model.entity.GatewayToolConfigCommandEntity;
-import com.jyk.domain.gateway.service.IGatewayConfigService;
-import com.jyk.domain.gateway.service.IGatewayToolConfigService;
+import com.jyk.domain.admin.gateway.model.entity.GatewayConfigCommandEntity;
+import com.jyk.domain.admin.gateway.model.entity.GatewayToolConfigCommandEntity;
+import com.jyk.domain.admin.gateway.service.IGatewayConfigService;
+import com.jyk.domain.admin.gateway.service.IGatewayToolConfigService;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
  * 2026/3/24 08:12
  */
 @Slf4j
-@Service
+@Service(("caseAdminGatewayService"))
 public class AdminGatewayService implements IAdminGatewayService {
 
     @Resource

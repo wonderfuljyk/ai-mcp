@@ -35,7 +35,7 @@ spring:
   ai:
     openai:
       base-url: https://apis.itedus.cn
-      api-key: sk-Pkiq7dGOZFORKUjm06234e9c173d40C6A8CdAb3aD5Ba7997
+      api-key: sk-cpAdXIR1irGGoQFD185fA4517cEa4e00B1523292Ab884dDb
       chat:
         options:
           model: gpt-4o
@@ -50,7 +50,7 @@ redis:
   sdk:
     config:
       host: 127.0.0.1
-      port: 16379
+      port: 6379
       pool-size: 10
       min-idle-size: 5
       idle-timeout: 30000

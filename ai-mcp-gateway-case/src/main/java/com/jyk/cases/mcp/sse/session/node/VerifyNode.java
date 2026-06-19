@@ -3,8 +3,9 @@ package com.jyk.cases.mcp.sse.session.node;
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
 import com.jyk.cases.mcp.sse.session.AbstractMcpSSESessionSupport;
 import com.jyk.cases.mcp.sse.session.factory.DefaultMcpSSESessionFactory;
-import com.jyk.domain.auth.model.entity.LicenseCommandEntity;
-import com.jyk.domain.auth.service.IAuthLicenseService;
+
+import com.jyk.domain.admin.auth.model.entity.LicenseCommandEntity;
+import com.jyk.domain.admin.auth.service.IAuthLicenseService;
 import com.jyk.types.enums.McpErrorCodes;
 import com.jyk.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;

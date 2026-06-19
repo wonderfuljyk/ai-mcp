@@ -2,7 +2,8 @@ package com.jyk.cases.mcp.streamable.session;
 
 import cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter;
 import com.jyk.cases.mcp.streamable.session.factory.DefaultMcpStreamableSessionFactory;
-import com.jyk.domain.session.service.ISessionManagementService;
+
+import com.jyk.domain.admin.session.service.ISessionManagementService;
 import org.springframework.http.codec.ServerSentEvent;
 import reactor.core.publisher.Flux;
 

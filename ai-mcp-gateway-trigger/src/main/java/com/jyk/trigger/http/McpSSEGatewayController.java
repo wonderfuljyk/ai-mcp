@@ -5,7 +5,8 @@ import com.jyk.api.IMcpGatewayService;
 import com.jyk.api.response.Response;
 import com.jyk.cases.mcp.IMcpMessageService;
 import com.jyk.cases.mcp.IMcpSessionService;
-import com.jyk.domain.session.model.entity.HandleMessageCommandEntity;
+
+import com.jyk.domain.admin.session.model.entity.HandleMessageCommandEntity;
 import com.jyk.types.enums.ResponseCode;
 import com.jyk.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;

@@ -3,7 +3,7 @@ package com.jyk.cases.mcp.streamable.session;
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
 import com.jyk.cases.mcp.IMcpSessionService;
 import com.jyk.cases.mcp.streamable.session.factory.DefaultMcpStreamableSessionFactory;
-import com.jyk.domain.session.service.ISessionManagementService;
+import com.jyk.domain.admin.session.service.ISessionManagementService;
 import com.jyk.types.exception.AppException;
 import org.springframework.http.codec.ServerSentEvent;
 import org.springframework.stereotype.Service;

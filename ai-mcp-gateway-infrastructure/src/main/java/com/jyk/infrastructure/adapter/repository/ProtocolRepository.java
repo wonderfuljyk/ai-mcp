@@ -1,8 +1,9 @@
 package com.jyk.infrastructure.adapter.repository;
 
-import com.jyk.domain.protocol.adapter.repository.IProtocolRepository;
-import com.jyk.domain.protocol.model.valobj.enums.ProtocolStatusEnum;
-import com.jyk.domain.protocol.model.valobj.http.HTTPProtocolVO;
+
+import com.jyk.domain.admin.protocol.adapter.repository.IProtocolRepository;
+import com.jyk.domain.admin.protocol.model.valobj.enums.ProtocolStatusEnum;
+import com.jyk.domain.admin.protocol.model.valobj.http.HTTPProtocolVO;
 import com.jyk.infrastructure.dao.IMcpProtocolHttpDao;
 import com.jyk.infrastructure.dao.IMcpProtocolMappingDao;
 import com.jyk.infrastructure.dao.po.McpProtocolHttpPO;

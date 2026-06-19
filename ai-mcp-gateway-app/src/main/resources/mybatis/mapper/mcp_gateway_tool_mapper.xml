@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.bugstack.ai.infrastructure.dao.IMcpGatewayToolDao">
+<mapper namespace="com.jyk.infrastructure.dao.IMcpGatewayToolDao">
 
-    <resultMap id="McpGatewayToolMap" type="cn.bugstack.ai.infrastructure.dao.po.McpGatewayToolPO">
+    <resultMap id="McpGatewayToolMap" type="com.jyk.infrastructure.dao.po.McpGatewayToolPO">
         <id column="id" property="id"/>
         <result column="gateway_id" property="gatewayId"/>
         <result column="tool_id" property="toolId"/>
@@ -16,7 +16,7 @@
         <result column="update_time" property="updateTime"/>
     </resultMap>
 
-    <insert id="insert" parameterType="cn.bugstack.ai.infrastructure.dao.po.McpGatewayToolPO">
+    <insert id="insert" parameterType="com.jyk.infrastructure.dao.po.McpGatewayToolPO">
         INSERT INTO mcp_gateway_tool (gateway_id, tool_id, tool_name, tool_type, tool_description, tool_version, protocol_id, protocol_type)
         VALUES (#{gatewayId}, #{toolId}, #{toolName}, #{toolType}, #{toolDescription}, #{toolVersion}, #{protocolId}, #{protocolType})
         ON DUPLICATE KEY UPDATE
@@ -30,7 +30,7 @@
         update_time = NOW()
     </insert>
 
-    <update id="updateProtocolByGatewayId" parameterType="cn.bugstack.ai.infrastructure.dao.po.McpGatewayToolPO">
+    <update id="updateProtocolByGatewayId" parameterType="com.jyk.infrastructure.dao.po.McpGatewayToolPO">
         UPDATE mcp_gateway_tool
         SET protocol_id = #{protocolId},
         protocol_type = #{protocolType},
@@ -38,7 +38,7 @@
         WHERE gateway_id = #{gatewayId}
     </update>
 
-    <select id="queryEffectiveTools" parameterType="cn.bugstack.ai.infrastructure.dao.po.McpGatewayToolPO"
+    <select id="queryEffectiveTools" parameterType="com.jyk.infrastructure.dao.po.McpGatewayToolPO"
             resultMap="McpGatewayToolMap">
         SELECT id, gateway_id, tool_id, tool_name, tool_type, tool_description, tool_version, protocol_id, protocol_type,
         create_time, update_time
@@ -46,12 +46,12 @@
         WHERE gateway_id = #{gatewayId}
     </select>
 
-    <select id="queryToolProtocolIdByToolName" parameterType="cn.bugstack.ai.infrastructure.dao.po.McpGatewayToolPO" resultType="java.lang.Long">
+    <select id="queryToolProtocolIdByToolName" parameterType="com.jyk.infrastructure.dao.po.McpGatewayToolPO" resultType="java.lang.Long">
         SELECT protocol_id FROM mcp_gateway_tool
         WHERE gateway_id = #{gatewayId} and tool_name = #{toolName}
     </select>
 
-    <update id="updateGatewayToolProtocol" parameterType="cn.bugstack.ai.infrastructure.dao.po.McpGatewayToolPO">
+    <update id="updateGatewayToolProtocol" parameterType="com.jyk.infrastructure.dao.po.McpGatewayToolPO">
         UPDATE mcp_gateway_tool
         SET protocol_id = #{protocolId},
         protocol_type = #{protocolType},
@@ -69,7 +69,7 @@
         WHERE gateway_id = #{gatewayId}
     </select>
 
-    <select id="queryToolList" parameterType="cn.bugstack.ai.infrastructure.dao.po.McpGatewayToolPO" resultMap="McpGatewayToolMap">
+    <select id="queryToolList" parameterType="com.jyk.infrastructure.dao.po.McpGatewayToolPO" resultMap="McpGatewayToolMap">
         SELECT id, gateway_id, tool_id, tool_name, tool_type, tool_description, tool_version, protocol_id, protocol_type,
                create_time, update_time
         FROM mcp_gateway_tool
@@ -90,7 +90,7 @@
         </if>
     </select>
 
-    <select id="queryToolListCount" parameterType="cn.bugstack.ai.infrastructure.dao.po.McpGatewayToolPO" resultType="java.lang.Long">
+    <select id="queryToolListCount" parameterType="com.jyk.infrastructure.dao.po.McpGatewayToolPO" resultType="java.lang.Long">
         SELECT count(id)
         FROM mcp_gateway_tool
         <where>

@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cn.bugstack.ai</groupId>
+    <groupId>com.jyk</groupId>
     <artifactId>ai-mcp-gateway</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
@@ -21,7 +21,7 @@
         <repository>
             <id>nexus-aliyun</id>
             <name>nexus-aliyun</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <url>https://maven.aliyun.com/repository/public</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -42,9 +42,9 @@
 
     <developers>
         <developer>
-            <name>xiaofuge</name>
-            <email>184172133@qq.com</email>
-            <organization>fuzhengwei</organization>
+            <name>jyk</name>
+            <email>2715563459@qq.com</email>
+            <organization>jyk</organization>
             <organizationUrl>https://github.com/fuzhengwei</organizationUrl>
         </developer>
     </developers>
@@ -166,32 +166,32 @@
 
             <!-- 工程模块 -->
             <dependency>
-                <groupId>cn.bugstack.ai</groupId>
+                <groupId>com.jyk</groupId>
                 <artifactId>ai-mcp-gateway-case</artifactId>
                 <version>1.0.0</version>
             </dependency>
             <dependency>
-                <groupId>cn.bugstack.ai</groupId>
+                <groupId>com.jyk</groupId>
                 <artifactId>ai-mcp-gateway-api</artifactId>
                 <version>1.0.0</version>
             </dependency>
             <dependency>
-                <groupId>cn.bugstack.ai</groupId>
+                <groupId>com.jyk</groupId>
                 <artifactId>ai-mcp-gateway-domain</artifactId>
                 <version>1.0.0</version>
             </dependency>
             <dependency>
-                <groupId>cn.bugstack.ai</groupId>
+                <groupId>com.jyk</groupId>
                 <artifactId>ai-mcp-gateway-infrastructure</artifactId>
                 <version>1.0.0</version>
             </dependency>
             <dependency>
-                <groupId>cn.bugstack.ai</groupId>
+                <groupId>ccom.jyk</groupId>
                 <artifactId>ai-mcp-gateway-types</artifactId>
                 <version>1.0.0</version>
             </dependency>
             <dependency>
-                <groupId>cn.bugstack.ai</groupId>
+                <groupId>com.jyk</groupId>
                 <artifactId>ai-mcp-gateway-trigger</artifactId>
                 <version>1.0.0</version>
             </dependency>

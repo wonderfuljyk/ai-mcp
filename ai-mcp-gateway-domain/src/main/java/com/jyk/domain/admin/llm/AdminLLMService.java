@@ -2,12 +2,14 @@ package com.jyk.domain.admin.llm;
 
 import com.jyk.api.dto.GatewayLLMRequestDTO;
 import com.jyk.api.dto.GatewayLLMResponseDTO;
-import com.jyk.cases.admin.IAdminLLMService;
-import com.jyk.domain.gateway.service.IGatewayToolConfigService;
-import com.jyk.domain.llm.model.entity.BuildChatModelCommandEntity;
-import com.jyk.domain.llm.model.valobj.McpConfigVO;
-import com.jyk.domain.llm.model.valobj.enums.McpTypeEnumVO;
-import com.jyk.domain.llm.service.ILLMService;
+
+import com.jyk.domain.admin.IAdminLLMService;
+
+import com.jyk.domain.admin.gateway.service.IGatewayToolConfigService;
+import com.jyk.domain.admin.llm.model.entity.BuildChatModelCommandEntity;
+import com.jyk.domain.admin.llm.model.valobj.McpConfigVO;
+import com.jyk.domain.admin.llm.model.valobj.enums.McpTypeEnumVO;
+import com.jyk.domain.admin.llm.service.ILLMService;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -22,7 +24,7 @@ import org.springframework.stereotype.Service;
  * 2026/4/8 07:50
  */
 @Slf4j
-@Service
+@Service("domainadminLLMSersive")
 public class AdminLLMService implements IAdminLLMService {
 
     @Value("${server.servlet.context-path}")

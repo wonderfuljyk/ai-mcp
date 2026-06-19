@@ -1,10 +1,11 @@
 package com.jyk.infrastructure.adapter.repository;
 
-import com.jyk.domain.gateway.adapter.repository.IGatewayRepository;
-import com.jyk.domain.gateway.model.entity.GatewayConfigCommandEntity;
-import com.jyk.domain.gateway.model.entity.GatewayToolConfigCommandEntity;
-import com.jyk.domain.gateway.model.valobj.GatewayConfigVO;
-import com.jyk.domain.gateway.model.valobj.GatewayToolConfigVO;
+
+import com.jyk.domain.admin.gateway.adapter.repository.IGatewayRepository;
+import com.jyk.domain.admin.gateway.model.entity.GatewayConfigCommandEntity;
+import com.jyk.domain.admin.gateway.model.entity.GatewayToolConfigCommandEntity;
+import com.jyk.domain.admin.gateway.model.valobj.GatewayConfigVO;
+import com.jyk.domain.admin.gateway.model.valobj.GatewayToolConfigVO;
 import com.jyk.infrastructure.dao.IMcpGatewayDao;
 import com.jyk.infrastructure.dao.IMcpGatewayToolDao;
 import com.jyk.infrastructure.dao.po.McpGatewayPO;

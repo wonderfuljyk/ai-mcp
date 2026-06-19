@@ -2,10 +2,11 @@ package com.jyk.infrastructure.adapter.port;
 
 import com.alibaba.fastjson.JSON;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.jyk.domain.session.adapter.port.ISessionPort;
-import com.jyk.domain.session.model.valobj.SessionSyncEventVO;
-import com.jyk.domain.session.model.valobj.SessionSyncInfoVO;
-import com.jyk.domain.session.model.valobj.gateway.McpToolProtocolConfigVO;
+
+import com.jyk.domain.admin.session.adapter.port.ISessionPort;
+import com.jyk.domain.admin.session.model.valobj.SessionSyncEventVO;
+import com.jyk.domain.admin.session.model.valobj.SessionSyncInfoVO;
+import com.jyk.domain.admin.session.model.valobj.gateway.McpToolProtocolConfigVO;
 import com.jyk.infrastructure.gateway.GenericHttpGateway;
 import com.jyk.infrastructure.redis.IRedisService;
 import com.jyk.types.enums.ResponseCode;

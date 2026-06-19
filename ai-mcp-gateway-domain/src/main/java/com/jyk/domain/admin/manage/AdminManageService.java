@@ -1,6 +1,7 @@
 package com.jyk.domain.admin.manage;
 
-import com.jyk.cases.admin.IAdminManageService;
+
+import com.jyk.domain.admin.IAdminManageService;
 import com.jyk.domain.admin.model.entity.*;
 import com.jyk.domain.admin.service.IAdminService;
 import jakarta.annotation.Resource;
@@ -16,7 +17,7 @@ import java.util.List;
  * 2026/3/26
  */
 @Slf4j
-@Service
+@Service("domainAdminManageService")
 public class AdminManageService implements IAdminManageService {
 
     @Resource

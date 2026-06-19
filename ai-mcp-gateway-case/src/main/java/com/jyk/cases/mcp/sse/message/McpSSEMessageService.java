@@ -3,7 +3,8 @@ package com.jyk.cases.mcp.sse.message;
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
 import com.jyk.cases.mcp.IMcpMessageService;
 import com.jyk.cases.mcp.sse.message.factory.DefaultMcpMessageFactory;
-import com.jyk.domain.session.model.entity.HandleMessageCommandEntity;
+
+import com.jyk.domain.admin.session.model.entity.HandleMessageCommandEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

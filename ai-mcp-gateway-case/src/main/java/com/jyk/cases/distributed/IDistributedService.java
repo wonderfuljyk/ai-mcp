@@ -1,6 +1,8 @@
 package com.jyk.cases.distributed;
 
-import com.jyk.domain.session.model.valobj.SessionSyncEventVO;
+
+
+import com.jyk.domain.admin.session.model.valobj.SessionSyncEventVO;
 
 import java.util.function.Consumer;
 
